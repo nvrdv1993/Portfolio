@@ -1,0 +1,20 @@
+.footer {
+    position: relative; /* Utilisez une position relative */
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    text-align: center; /* Centrer le contenu horizontalement */
+    background-color: black; /* Ajoutez une couleur de fond pour le footer */
+  }
+  
+  .footer i {
+    color: white;
+    margin: 0 10px; /* Réduisez la marge pour les icônes */
+    font-size: 2rem; /* Taille de police de 2rem */
+    transition: transform 0.3s ease; /* Ajoutez une transition pour un effet fluide */
+  }
+  
+  .footer i:hover {
+    transform: scale(1.2); /* Grossissement de 20% au survol */
+  }
+  

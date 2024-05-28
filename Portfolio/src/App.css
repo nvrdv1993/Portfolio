@@ -1,0 +1,16 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 20px;
+}
+
+/* Ajoutez un style spécifique pour exclure le fond animé du style global */
+.background {
+  background-color: transparent; /* Assurez-vous que le fond animé n'a pas de couleur de fond spécifiée ici */
+  color: inherit; /* Gardez la couleur du texte héritée */
+  margin: 0; /* Réinitialisez les marges si nécessaire */
+}
+
