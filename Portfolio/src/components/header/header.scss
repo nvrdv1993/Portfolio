@@ -3,29 +3,29 @@ $pri: #FDFDFD;
 $sec: #212121;
 $ter: #A5A5A5;
 
-// Reset
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
 // Body
 body {
-  padding: 2rem 5rem;
-  background-color: $sec;
+  padding: 2.25rem 1.25rem;
 }
 
 // Header
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; // Espacement équitable entre les éléments
   align-items: center;
-  padding-bottom: 2rem;
+  width: 85%; 
+  margin: 0 auto; // Centre le header sur la page
+  padding-bottom: 10rem;
+  
 
   .logo {
     color: $pri;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: transform 0.3s ease; // Ajout de la transition pour le grossissement
+    &:hover {
+      transform: scale(1.2); // Grossissement au survol
+    }
   }
 
   .nav-container {
@@ -36,7 +36,7 @@ header {
         margin-left: 2rem;
         text-decoration: none;
         color: $pri;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         transition: all 0.3s ease; // Transition pour le grossissement
 
         &:hover {
@@ -99,10 +99,11 @@ header {
 }
 
 // Icône du burger
-.icon-container {
+.icon-container i {
   position: fixed;
-  top: 2.4rem;
-  right: 1rem;
+  margin-left: 2rem;
+  top: 5.4rem;
+  right: 2rem;
   z-index: 10000;
 
   #menu_icon {

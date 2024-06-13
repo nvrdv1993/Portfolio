@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './error.scss'; // Assure-toi d'importer ton fichier Sass
+import './error.scss';
 
-const NotFoundPage = () => {
+const NotFound = () => {
   return (
-    <div className="error-container">
-      <div className="error-message">
-        <h1 className="error-heading">404</h1>
-        <p className="error-text">Oops! La page que vous recherchez est introuvable.</p>
-        <Link to="/" className="error-link">Retourner à la page d'accueil</Link>
+    <div className="not-found-container">
+      <div className="not-found" title="404">
+        404
       </div>
+      <p>Page not found. Go back to the <Link to="/">homepage</Link>.</p>
     </div>
   );
 };
 
-export default NotFoundPage;
+export default NotFound;

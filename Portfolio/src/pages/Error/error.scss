@@ -1,25 +1,93 @@
-.error-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono:400');
+
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #131313;
+  color: #fff;
+  font-size: 96px;
+  font-family: 'Fira Mono', monospace;
+  letter-spacing: -7px;
+  text-align: center;
+}
+
+.not-found {
+  animation: glitch 1s linear infinite;
+  position: relative;
+}
+
+@keyframes glitch {
+  2%, 64% {
+    transform: translate(2px, 0) skew(0deg);
   }
-  
-  .error-message {
-    text-align: center;
+  4%, 60% {
+    transform: translate(-2px, 0) skew(0deg);
   }
-  
-  .error-heading {
-    font-size: 4rem;
+  62% {
+    transform: translate(0, 0) skew(5deg);
   }
-  
-  .error-text {
-    font-size: 1.5rem;
+}
+
+.not-found::before,
+.not-found::after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.not-found::before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%, 64% {
+    transform: translate(2px, -2px);
   }
-  
-  .error-link {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 1.2rem;
+  4%, 60% {
+    transform: translate(-2px, 2px);
   }
-  
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+.not-found::after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+  2%, 64% {
+    transform: translate(-2px, 0);
+  }
+  4%, 60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
+
+.not-found-container p {
+  font-size: 24px;
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+
+.not-found-container a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.not-found-container a:hover {
+  color: #1c86ee;
+}

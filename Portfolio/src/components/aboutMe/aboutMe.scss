@@ -5,6 +5,7 @@
   overflow: hidden;
   border-right: 2px solid black;
   position: relative;
+  min-height: 5.5rem; // Hauteur minimale pour garantir un espace même lorsque displayedLetters est vide
 }
 
 .typewriter-text::after {
@@ -18,6 +19,36 @@
   animation: typing 3s steps(40, end);
 }
 
+.presentation-section {
+  width: 85%; // La div occupe 85% de la largeur de son conteneur parent
+  margin: 0 auto; // Centre le contenu horizontalement
+  padding-bottom: 10rem;
+}
+
+p {
+  font-size: 1.2rem; // Taille de police
+  line-height: 1.8; // Hauteur de ligne
+  margin-top: 3rem; // Marge en haut
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.fade-in-up-1 {
+  animation-delay: 0.5s;
+}
+
+.fade-in-up-2 {
+  animation-delay: 1s;
+}
+
+.fade-in-up-3 {
+  animation-delay: 1.5s;
+}
+
+.fade-in-up-4 {
+  animation-delay: 2s;
+}
 
 @keyframes typing {
   0% {
@@ -34,5 +65,12 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
