@@ -1,20 +1,46 @@
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .projects-container {
   width: 90%;
   margin: 0 auto;
   padding: 80px 0;
   padding-bottom: 10rem;
+  opacity: 0; /* Initialement caché */
+  transform: translateX(-100%); /* Hors de l'écran à gauche */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* Transition pour l'animation */
+}
+
+.projects-container.animate {
+  opacity: 1;
+  transform: translateX(0); /* Retourne à sa position initiale */
 }
 
 .projects-container h2 {
   color: white;
   padding: 0 0 35px 0;
   font-size: 2.5rem;
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.projects-container h2.animate {
+  opacity: 1;
+  transform: translateX(0); /* Retourne à sa position initiale */
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  gap: 80px;
 }
 
 .project-card {
@@ -26,6 +52,14 @@
   position: relative;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.project-card.animate {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .project-card img {
@@ -39,11 +73,11 @@
 .project-card h3 {
   position: absolute;
   bottom: 10px;
-  left: 10px;
   color: white;
-  padding: 5px 20px ;
+  padding: 20px 20px;
   border-radius: 5px;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 800;
   transition: bottom 0.3s ease-in-out;
   z-index: 2;
 }
@@ -64,7 +98,7 @@
 
 .project-card-content p {
   margin: 0 10px 10px; /* Ajoute une marge de chaque côté du texte et en bas */
-  
+  font-size: 1.3rem;
 }
 
 .project-links {
@@ -160,7 +194,7 @@
 }
 
 /* Responsive design */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -170,13 +204,18 @@
   .project-card {
     min-height: 500px; // Réduit la hauteur minimum des cartes
   }
-  
+
+  .project-card-content p {
+    font-size: 1.3rem; // Réduit le padding pour économiser de l'espace
+  }
+
   .project-card-content {
     padding: 10px; // Réduit le padding pour économiser de l'espace
   }
 
   .project-card h3 {
     font-size: 1.5rem; // Réduit la taille de la police du titre
+    padding-bottom: 2rem;
   }
 
   .badge {
@@ -187,4 +226,3 @@
     font-size: 1.5rem; // Réduit la taille des icônes
   }
 }
-

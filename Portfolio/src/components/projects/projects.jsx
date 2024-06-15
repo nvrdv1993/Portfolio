@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './projects.scss';
 import NinaCarducciImage from '../../assets/Nina Carducci.webp';
 import ArgentBank from '../../assets/argent-bank.jpeg';
@@ -6,8 +6,35 @@ import Events from '../../assets/724Events.png';
 import Qwenta from '../../assets/banner-qwenta.png';
 
 const Projects = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const projectsContainer = document.querySelector('.projects-container');
+      const rect = projectsContainer.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      if (rect.top <= windowHeight - 100) {
+        projectsContainer.classList.add('animate');
+
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('animate');
+          }, index * 300); // Décalage de 300ms entre chaque carte
+        });
+
+        const projectTitle = document.querySelector('.projects-container h2');
+        projectTitle.classList.add('animate');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <div className="projects-container"id ="projets">
+    <div className="projects-container" id="projets">
       <h2>Projets</h2>
       <div className="projects-grid">
         <div className="project-card">
@@ -83,8 +110,7 @@ const Projects = () => {
           <h3>Qwenta</h3>
           <div className="project-card-content">
             <p>Au sein de l'agence Webgencia, j'ai pris en charge la préparation et la planification d'un projet de développement particulier : la création du "Menu Maker" pour l'entreprise Qwenta. Le "Menu Maker" est un outil novateur dédié aux restaurateurs, simplifiant la conception et la mise en page de leurs menus.</p>
-          </div>
-          <div className="project-badges">
+            <div className="project-badges">
               <span className="badge">Méthode agile</span>
               <span className="badge">Scrum</span>
               <span className="badge">Kanban</span>
@@ -94,6 +120,7 @@ const Projects = () => {
               <span className="badge">Planification de projet</span>
               <span className="badge">Spécifications techniques</span>
             </div>
+          </div>
         </div>
       </div>
     </div>

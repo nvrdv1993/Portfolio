@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './aboutMe.scss';
 
 const AboutMe = () => {
-  const words = ['DEVELOPPEUR WEB!', 'CURIEUX!', 'MOTIVE!', 'PASSIONE!'];
+  const words = ['DEVELOPPEUR WEB!', 'CURIEUX!', 'MOTIVE!', 'PASSIONNE!'];
   const [displayedWordIndex, setDisplayedWordIndex] = useState(0);
   const [displayedLetters, setDisplayedLetters] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
@@ -51,7 +51,7 @@ const AboutMe = () => {
         Durant une période de 9 mois, j'ai eu la chance d'être formé par OpenClassrooms, où j'ai plongé dans l'univers du développement web. Au cours de cette formation, j'ai travaillé sur une multitude de projets pratiques, allant du codage à l'optimisation du référencement, en passant par la planification de projet.
       </p>
       <p className="fade-in-up-3">
-        Cette expérience m'a permis d'explorer divers aspects du développement, mais aussi de maîtriser des outils et technologies variés, tels que React, Sass, Node.js, Redux, et bien d'autres. Mon objectif a toujours été d'optimiser au mieux les interfaces utilisateur, en les rendant à la fois intuitives et esthétiques.
+        Cette expérience m'a permis d'explorer divers aspects du développement, mais aussi de maîtriser des outils et technologies variés, tels que React, Sass, Node.js, Redux, et bien d'autres. Mon objectif a toujours été d'optimiser au mieux les interfaces utilisateurs, en les rendant à la fois intuitives et esthétiques.
       </p>
       <p className="fade-in-up-4">
         Je vous invite à parcourir mes différents projets présentés ici, ainsi que mon profil GitHub pour découvrir davantage mon travail. Si vous êtes intéressé par une collaboration ou si vous avez des questions, n'hésitez pas à me contacter. Je serai ravi d'échanger avec vous !

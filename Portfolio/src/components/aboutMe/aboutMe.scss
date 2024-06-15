@@ -3,7 +3,7 @@
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid black;
+  //border-right: 2px solid black;
   position: relative;
   min-height: 5.5rem; // Hauteur minimale pour garantir un espace même lorsque displayedLetters est vide
 }
@@ -15,12 +15,12 @@
   right: 0;
   width: 0;
   height: 100%;
-  border-right: 2px solid black;
+  //border-right: 2px solid black;
   animation: typing 3s steps(40, end);
 }
 
 .presentation-section {
-  width: 85%; // La div occupe 85% de la largeur de son conteneur parent
+  width: 90%; // La div occupe 85% de la largeur de son conteneur parent
   margin: 0 auto; // Centre le contenu horizontalement
   padding-bottom: 10rem;
 }
