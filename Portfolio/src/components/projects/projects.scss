@@ -16,7 +16,7 @@
   padding-bottom: 10rem;
   opacity: 0; /* Initialement caché */
   transform: translateX(-100%); /* Hors de l'écran à gauche */
-  transition: opacity 1s ease-out, transform 1s ease-out; /* Transition pour l'animation */
+  transition: opacity 2s ease-out, transform 2s ease-out; /* Transition pour l'animation */
 }
 
 .projects-container.animate {
@@ -146,7 +146,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 1s ease-in-out;
   z-index: 1;
 }
 
@@ -215,7 +215,7 @@
 
   .project-card h3 {
     font-size: 1.5rem; // Réduit la taille de la police du titre
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
   }
 
   .badge {

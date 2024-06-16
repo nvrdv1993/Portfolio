@@ -1,20 +1,34 @@
 .footer {
-    position: relative; /* Utilisez une position relative */
-    width: 100%;
-    color: #fff;
-    
-    text-align: center; /* Centrer le contenu horizontalement */
-   // background-color: black; /* Ajoutez une couleur de fond pour le footer */
-  }
-  
-  .footer i {
-    color: white;
-    margin: 0 10px; /* Réduisez la marge pour les icônes */
-    font-size: 2rem; /* Taille de police de 2rem */
-    transition: transform 0.3s ease; /* Ajoutez une transition pour un effet fluide */
-  }
-  
-  .footer i:hover {
-    transform: scale(1.5); /* Grossissement de 20% au survol */
-  }
-  
+  position: relative; 
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  // background-color: black;
+}
+
+.footer i {
+  color: white;
+  margin: 0 10px; 
+  font-size: 2rem; 
+  transition: transform 0.3s ease; 
+}
+
+.footer i:hover {
+  transform: scale(1.5); 
+}
+
+.back-to-top {
+  cursor: pointer;
+}
+
+.back-to-top i {
+  padding-top: 2rem; // Ajoutez un espacement en bas de la flèche
+  padding-bottom: 2rem;
+  animation: blink 1s infinite; // Animation de clignotement
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}

@@ -32,7 +32,7 @@ function Header() {
 
   return (
     <header>
-      <a href="#top" className="logo" onClick={scrollToTop}>NDV</a>
+      <a href="#top" className="logo" onClick={scrollToTop}>Portfolio</a>
       <div className="nav-container desktop">
         <nav>
           <a className="item" href="#a propos" onClick={(e) => handleSmoothScroll(e, 'a propos')}>A propos</a>
